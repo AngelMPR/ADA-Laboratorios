@@ -10,10 +10,13 @@ public class PruebaLaboratorio01 {
         System.out.println("Ingrese un numero: ");
         valor = entrada.nextInt();      
                   
-        System.out.println("Busqueda de un elemento de un vector");
-        System.out.println("Resultado: "+Laboratorio01.BusquedaSecuencial(valor));
+        System.out.println("FIBONACCI MEDIANTE RECURSIVIDAD");
+        System.out.println("Resultado: "+Laboratorio01.fibonacciRecursivo(valor));
         System.out.println("Tiempo de ejecucion: "+Laboratorio01.getContadorTiempo());
         
+        System.out.println("FIBONACCI MEDIANTE ITERACIONES");
+        System.out.println("Resulatdo: "+Laboratorio01.fibonacciIterativo(valor));
+        System.out.println("Tiempo de ejecucion: "+Laboratorio01.getContadorTiempo());
     }
     
 }

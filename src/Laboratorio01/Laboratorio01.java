@@ -14,19 +14,30 @@ public class Laboratorio01 {
     public static void setContadorTiempo(int contadorTiempo) {
         Laboratorio01.contadorTiempo = contadorTiempo;
     }
+    //Metodo recursivo para la sucesion fibonacci 
+    public static int fibonacciRecursivo(int n){      
+        if(n==1 || n==2){
+            contadorTiempo++;
+            return 1;
+        }
+        else{
+            contadorTiempo++;
+            return fibonacciRecursivo(n-1)+fibonacciRecursivo(n-2);  
+        }         
+    }
     
-    public static boolean BusquedaSecuencial(int n){
-        int arreglo[]={4,1,5,2,3};
-        int i =0;
-        boolean band = false;
+    //Metodo iterativo para la sucesion fibonacci 
+    public static int fibonacciIterativo(int n){
+        int fib=0, prim=1, seg=0;
         contadorTiempo=0;
-        while (i<5 && band == false) {
-            if(arreglo[i]==n){
-                band=true;
-            }
-            i++;
+        while(n>0){
+            fib=prim+seg;
+            prim=seg;
+            seg=fib;
+            n--;
             contadorTiempo++;
         }
-        return band;    
-    }     
+        return fib;
+    }
+    
 }
